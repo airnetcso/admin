@@ -2,93 +2,177 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Form Pendaftaran Kursus Online Gumi Eohakwon Sukabumi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Daftar Kelas Bahasa Korea - Mobile Friendly</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: 'Inter', system-ui, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #e2e8f0;
       min-height: 100vh;
-      padding: 20px;
-      line-height: 1.6;
+      padding: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
+
     .container {
-      max-width: 480px;
-      margin: 40px auto;
-      background: rgba(30,41,59,0.7);
-      backdrop-filter: blur(10px);
-      border-radius: 16px;
-      border: 1px solid rgba(148,163,184,0.2);
+      max-width: 100%;
+      width: 100%;
+      margin: 20px auto;
+      background: rgba(30,41,59,0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,0.25);
       overflow: hidden;
-      box-shadow: 0 20px 50px -15px rgba(0,0,0,0.6);
+      box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
     }
+
     .header {
       background: linear-gradient(90deg, #6366f1, #8b5cf6);
-      padding: 60px 30px 40px;
+      padding: 50px 20px 35px;
       text-align: center;
       position: relative;
     }
+
     .header::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 60%);
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.12) 0%, transparent 70%);
     }
-    .header h1 { font-size: 2.1rem; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
-    .header p { font-size: 1.05rem; opacity: 0.9; }
-    .content { padding: 32px 28px 40px; }
+
+    .header h1 {
+      font-size: clamp(1.8rem, 7vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: clamp(1rem, 4vw, 1.1rem);
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 28px 20px 36px;
+    }
+
     .info-box {
-      background: rgba(59,69,94,0.4);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 24px 0;
-      border: 1px solid rgba(148,163,184,0.15);
+      background: rgba(59,69,94,0.45);
+      border-radius: 16px;
+      padding: 18px;
+      margin: 20px 0;
+      border: 1px solid rgba(148,163,184,0.2);
       font-size: 0.95rem;
     }
-    .info-box strong { color: #c084fc; }
-    form { display: flex; flex-direction: column; gap: 20px; }
-    label { font-size: 0.9rem; font-weight: 500; color: #cbd5e1; margin-bottom: 6px; display: block; }
+
+    .info-box strong {
+      color: #c084fc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+      display: block;
+    }
+
     input, select {
       width: 100%;
-      padding: 14px 16px;
-      border-radius: 10px;
-      border: 1px solid rgba(148,163,184,0.3);
-      background: rgba(15,23,42,0.6);
+      padding: 16px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.35);
+      background: rgba(15,23,42,0.7);
       color: white;
       font-size: 1rem;
-      transition: all 0.2s;
+      transition: all 0.2s ease;
+      -webkit-appearance: none;
+      appearance: none;
     }
+
     input:focus, select:focus {
       outline: none;
       border-color: #a78bfa;
-      box-shadow: 0 0 0 3px rgba(167,139,250,0.15);
+      box-shadow: 0 0 0 4px rgba(167,139,250,0.2);
     }
+
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+      background-size: 12px;
+    }
+
     .btn {
       background: linear-gradient(90deg, #6366f1, #8b5cf6);
       color: white;
       border: none;
-      padding: 16px;
-      font-size: 1.05rem;
+      padding: 18px;
+      font-size: 1.1rem;
       font-weight: 600;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
-      margin-top: 12px;
-      transition: all 0.25s;
-      box-shadow: 0 10px 25px -10px rgba(99,102,241,0.4);
+      margin-top: 10px;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 20px -8px rgba(99,102,241,0.5);
+      min-height: 56px; /* touch-friendly */
     }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 15px 35px -10px rgba(99,102,241,0.55); }
-    .btn:active { transform: translateY(0); }
-    .footer-text { text-align: center; font-size: 0.85rem; color: #94a3b8; margin-top: 32px; }
-    @media (max-width: 500px) {
-      .container { margin: 20px auto; }
-      .header { padding: 50px 24px 32px; }
-      .content { padding: 28px 24px 36px; }
+
+    .btn:hover, .btn:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -8px rgba(99,102,241,0.7);
+    }
+
+    .footer-text {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 28px;
+      padding: 0 10px;
+    }
+
+    /* Mobile-first: default styles sudah untuk HP */
+    /* Tambah untuk tablet & desktop */
+    @media (min-width: 480px) {
+      .container {
+        max-width: 420px;
+        margin: 40px auto;
+      }
+      .content {
+        padding: 32px 28px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        max-width: 500px;
+      }
+      .header {
+        padding: 60px 30px 40px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        max-width: 520px;
+      }
     }
   </style>
 </head>
@@ -96,27 +180,28 @@
 
 <div class="container">
   <div class="header">
-    <h1>Form Pendaftaran Kursus Bahasa Korea</h1>
-    <p>Gumi Eohakwon Sukabumi - 구미 어학원</p>
+    <h1>Daftar Kelas Bahasa Korea</h1>
+    <p>Batch Februari 2026 • Online & Offline</p>
   </div>
 
   <div class="content">
     
     <div class="info-box">
-      <strong>Jadwal mulai :</strong> 23 Februari 2026<br>
-      <strong>Metode :</strong> Zoom + rekaman + materi lengkap<br>
+      <strong>Jadwal mulai:</strong> 24 Februari 2026<br>
+      <strong>Metode:</strong> Zoom + rekaman + materi lengkap<br>
+      <strong>Slot tersisa:</strong> 18 / 60 kuota (tergantung kelas)
     </div>
 
     <form id="daftarForm" onsubmit="handleSubmit(event)">
       
       <div>
         <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" name="nama" required placeholder="Contoh: Budi Santoso">
+        <input type="text" id="nama" name="nama" required placeholder="Contoh: Budi Santoso" autocomplete="name">
       </div>
 
       <div>
         <label for="wa">Nomor WhatsApp</label>
-        <input type="tel" id="wa" name="wa" required placeholder="0812xxxxxxx" pattern="08[0-9]{8,11}">
+        <input type="tel" id="wa" name="wa" required placeholder="0812xxxxxxx" pattern="08[0-9]{8,12}" inputmode="numeric" autocomplete="tel">
       </div>
 
       <div>
@@ -134,8 +219,8 @@
     </form>
 
     <div class="footer-text">
-      Setelah melakukan pembayaran, silakan konfirmasi ke nomor admin via WA dengan melampirkan bukti pembayaran.<br>
-      Powered by Gumi Eohakwon Sukabumi • 2026
+      Biaya transfer setelah konfirmasi admin via WA<br>
+      Powered by Kelas Bahasa Korea • 2026
     </div>
 
   </div>
@@ -153,7 +238,7 @@
     };
 
     if (!data.nama || !data.wa || !data.program) {
-      alert("Mohon isi semua data ya bro!");
+      alert("Isi semua data dulu ya bro!");
       return;
     }
 
@@ -180,31 +265,30 @@
     }
 
     const message = 
-`Terima kasih kak ${data.nama}!
+`Mantap ${data.nama}!
 
-Pendaftaran ${kelasName} sudah kami terima.
+Pendaftaran ${kelasName} sudah masuk.
 
 Detail Pembayaran:
 - Biaya: ${biaya}
 - Transfer ke: BCA
-- Nomor Rekening: 5931 0845 51
-- Atas Nama: Arva Djatnika
+- Rekening: 18304676
+- A/N: Deni Supriadi
 
-Admin akan hubungi via WA dalam 1×24 jam untuk konfirmasi dan verifikasi pembayaran. Jangan transfer dulu sebelum dapat chat dari admin ya bro!
+Admin bakal chat WA dalam 1×24 jam buat konfirmasi & verif pembayaran. Jangan transfer dulu sebelum dapat balasan ya!
 
-Terima kasih! 🚀`;
+Terima kasih bro! 🇰🇷`;
 
     alert(message);
-
     form.reset();
   }
 
-  // Auto format nomor WA
+  // Auto format WA (buat HP lebih enak)
   document.getElementById('wa').addEventListener('input', function(e) {
     let val = e.target.value.replace(/\D/g, '');
-    if (val.startsWith('0')) val = val;
-    else if (val.startsWith('62')) val = '0' + val.slice(2);
-    e.target.value = val;
+    if (val.length > 0 && !val.startsWith('0')) val = '0' + val;
+    if (val.startsWith('62')) val = '0' + val.slice(2);
+    e.target.value = val.slice(0, 13); // batas max nomor Indo
   });
 </script>
 
