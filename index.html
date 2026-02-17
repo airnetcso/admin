@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>Daftar Kelas Bahasa Korea - Mobile Friendly</title>
+  <title>Form Pendaftaran Kursus Online Gumi Eohakwon Sukabumi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
     
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -21,15 +17,14 @@
       color: #e2e8f0;
       min-height: 100vh;
       padding: 16px;
-      line-height: 1.5;
+      line-height: 1.55;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     .container {
-      max-width: 100%;
       width: 100%;
-      margin: 20px auto;
+      max-width: 100%;
+      margin: 24px auto;
       background: rgba(30,41,59,0.75);
       backdrop-filter: blur(12px);
       border-radius: 20px;
@@ -40,7 +35,7 @@
 
     .header {
       background: linear-gradient(90deg, #6366f1, #8b5cf6);
-      padding: 50px 20px 35px;
+      padding: 48px 20px 32px;
       text-align: center;
       position: relative;
     }
@@ -53,13 +48,14 @@
     }
 
     .header h1 {
-      font-size: clamp(1.8rem, 7vw, 2.2rem);
+      font-size: clamp(1.9rem, 6.5vw, 2.1rem);
       font-weight: 700;
       margin-bottom: 8px;
+      letter-spacing: -0.5px;
     }
 
     .header p {
-      font-size: clamp(1rem, 4vw, 1.1rem);
+      font-size: clamp(1rem, 4vw, 1.05rem);
       opacity: 0.9;
     }
 
@@ -69,22 +65,16 @@
 
     .info-box {
       background: rgba(59,69,94,0.45);
-      border-radius: 16px;
+      border-radius: 14px;
       padding: 18px;
       margin: 20px 0;
       border: 1px solid rgba(148,163,184,0.2);
-      font-size: 0.95rem;
+      font-size: 0.97rem;
     }
 
-    .info-box strong {
-      color: #c084fc;
-    }
+    .info-box strong { color: #c084fc; }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
+    form { display: flex; flex-direction: column; gap: 18px; }
 
     label {
       font-size: 0.95rem;
@@ -103,8 +93,6 @@
       color: white;
       font-size: 1rem;
       transition: all 0.2s ease;
-      -webkit-appearance: none;
-      appearance: none;
     }
 
     input:focus, select:focus {
@@ -114,6 +102,8 @@
     }
 
     select {
+      -webkit-appearance: none;
+      appearance: none;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: right 18px center;
@@ -132,7 +122,7 @@
       margin-top: 10px;
       transition: all 0.25s ease;
       box-shadow: 0 8px 20px -8px rgba(99,102,241,0.5);
-      min-height: 56px; /* touch-friendly */
+      min-height: 56px; /* lebih mudah disentuh di HP */
     }
 
     .btn:hover, .btn:focus {
@@ -142,37 +132,24 @@
 
     .footer-text {
       text-align: center;
-      font-size: 0.85rem;
+      font-size: 0.87rem;
       color: #94a3b8;
       margin-top: 28px;
-      padding: 0 10px;
+      padding: 0 12px;
     }
 
-    /* Mobile-first: default styles sudah untuk HP */
-    /* Tambah untuk tablet & desktop */
+    /* Penyesuaian untuk layar lebih besar (tablet/desktop) */
     @media (min-width: 480px) {
       .container {
-        max-width: 420px;
+        max-width: 440px;
         margin: 40px auto;
       }
-      .content {
-        padding: 32px 28px;
-      }
+      .content { padding: 32px 28px; }
+      .header { padding: 60px 30px 40px; }
     }
 
     @media (min-width: 768px) {
-      .container {
-        max-width: 500px;
-      }
-      .header {
-        padding: 60px 30px 40px;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .container {
-        max-width: 520px;
-      }
+      .container { max-width: 500px; }
     }
   </style>
 </head>
@@ -180,30 +157,25 @@
 
 <div class="container">
   <div class="header">
-    <h1>Daftar Kelas Bahasa Korea</h1>
-    <p>Batch Februari 2026 • Online & Offline</p>
+    <h1>Form Pendaftaran Kursus Bahasa Korea</h1>
+    <p>Gumi Eohakwon Sukabumi - 구미 어학원</p>
   </div>
-
   <div class="content">
-    
+   
     <div class="info-box">
-      <strong>Jadwal mulai:</strong> 24 Februari 2026<br>
-      <strong>Metode:</strong> Zoom + rekaman + materi lengkap<br>
-      <strong>Slot tersisa:</strong> 18 / 60 kuota (tergantung kelas)
+      <strong>Jadwal mulai :</strong> 23 Februari 2026<br>
+      <strong>Metode :</strong> Zoom + rekaman + materi lengkap<br>
     </div>
-
     <form id="daftarForm" onsubmit="handleSubmit(event)">
-      
+     
       <div>
         <label for="nama">Nama Lengkap</label>
         <input type="text" id="nama" name="nama" required placeholder="Contoh: Budi Santoso" autocomplete="name">
       </div>
-
       <div>
         <label for="wa">Nomor WhatsApp</label>
         <input type="tel" id="wa" name="wa" required placeholder="0812xxxxxxx" pattern="08[0-9]{8,12}" inputmode="numeric" autocomplete="tel">
       </div>
-
       <div>
         <label for="program">Pilih Kelas</label>
         <select id="program" name="program" required>
@@ -214,37 +186,31 @@
           <option value="to-pembahasan">Kelas Try Out + Pembahasan Soal</option>
         </select>
       </div>
-
       <button type="submit" class="btn">Daftar Sekarang →</button>
     </form>
-
     <div class="footer-text">
-      Biaya transfer setelah konfirmasi admin via WA<br>
-      Powered by Kelas Bahasa Korea • 2026
+      Setelah melakukan pembayaran, silakan konfirmasi ke nomor admin via WA dengan melampirkan bukti pembayaran.<br>
+      Powered by Gumi Eohakwon Sukabumi • 2026
     </div>
-
   </div>
 </div>
 
 <script>
   function handleSubmit(e) {
     e.preventDefault();
-    
+   
     const form = e.target;
     const data = {
       nama: form.nama.value.trim(),
       wa: form.wa.value.trim(),
       program: form.program.value
     };
-
     if (!data.nama || !data.wa || !data.program) {
-      alert("Isi semua data dulu ya bro!");
+      alert("Mohon isi semua data ya bro!");
       return;
     }
-
     let kelasName = '';
     let biaya = '';
-
     switch(data.program) {
       case 'online-reguler':
         kelasName = 'Kelas Online Reguler';
@@ -263,34 +229,26 @@
         biaya = 'Rp 150.000';
         break;
     }
-
-    const message = 
-`Mantap ${data.nama}!
-
-Pendaftaran ${kelasName} sudah masuk.
-
+    const message =
+`Terima kasih kak ${data.nama}!
+Pendaftaran ${kelasName} sudah kami terima.
 Detail Pembayaran:
 - Biaya: ${biaya}
 - Transfer ke: BCA
-- Rekening: 18304676
-- A/N: Deni Supriadi
-
-Admin bakal chat WA dalam 1×24 jam buat konfirmasi & verif pembayaran. Jangan transfer dulu sebelum dapat balasan ya!
-
-Terima kasih bro! 🇰🇷`;
-
+- Nomor Rekening: 5931 0845 51
+- Atas Nama: Arva Djatnika
+Admin akan hubungi via WA dalam 1×24 jam untuk konfirmasi dan verifikasi pembayaran. Jangan transfer dulu sebelum dapat chat dari admin ya bro!
+Terima kasih! 🚀`;
     alert(message);
     form.reset();
   }
-
-  // Auto format WA (buat HP lebih enak)
+  // Auto format nomor WA
   document.getElementById('wa').addEventListener('input', function(e) {
     let val = e.target.value.replace(/\D/g, '');
-    if (val.length > 0 && !val.startsWith('0')) val = '0' + val;
-    if (val.startsWith('62')) val = '0' + val.slice(2);
-    e.target.value = val.slice(0, 13); // batas max nomor Indo
+    if (val.startsWith('0')) val = val;
+    else if (val.startsWith('62')) val = '0' + val.slice(2);
+    e.target.value = val.slice(0, 13); // batasi agar tidak terlalu panjang
   });
 </script>
-
 </body>
 </html>
