@@ -241,14 +241,14 @@ function handleSubmit(e) {
 `Mohon segera ditindaklanjuti ya admin! 🚀`;
 
   // Nomor admin (format internasional tanpa + atau spasi)
-  const nomorAdmin = "62818055518900";
+  const nomorAdmin = "6281805551900";
 
   // Buka WhatsApp
   const urlWA = `https://wa.me/${nomorAdmin}?text=${pesan}`;
   window.open(urlWA, '_blank');
 
   // Pesan konfirmasi ke user
-  alert(`Terima kasih kak ${nama}! \nData pendaftaran sudah siap dikirim ke admin via WhatsApp.\nSilakan tekan "KIRIM" di aplikasi WhatsApp ya bro!`);
+  alert(`Terima kasih kak ${nama}! \nData pendaftaran sudah siap dikirim ke admin via WhatsApp.\nSilakan tekan "KIRIM" di aplikasi WhatsApp!`);
 
   form.reset();
 }
@@ -264,3 +264,4 @@ document.getElementById('wa').addEventListener('input', function(e) {
 
 </body>
 </html>
+
