@@ -1,3 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Form Pendaftaran Kursus Bahasa Korea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0;
+      min-height: 100vh;
+      padding: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 100%;
+      margin: 24px auto;
+      background: rgba(30,41,59,0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      border: 1px solid rgba(148,163,184,0.25);
+      overflow: hidden;
+      box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+    }
+
+    .header {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      padding: 48px 20px 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.12) 0%, transparent 70%);
+    }
+
+    .header h1 {
+      font-size: clamp(1.9rem, 6.5vw, 2.1rem);
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .header p {
+      font-size: clamp(1rem, 4vw, 1.05rem);
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 28px 20px 36px;
+    }
+
+    .info-box {
+      background: rgba(59,69,94,0.45);
+      border-radius: 14px;
+      padding: 18px;
+      margin: 20px 0;
+      border: 1px solid rgba(148,163,184,0.2);
+      font-size: 0.97rem;
+    }
+
+    .info-box strong { color: #c084fc; }
+
+    form { display: flex; flex-direction: column; gap: 18px; }
+
+    label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 16px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,0.35);
+      background: rgba(15,23,42,0.7);
+      color: white;
+      font-size: 1rem;
+      transition: all 0.2s ease;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #a78bfa;
+      box-shadow: 0 0 0 4px rgba(167,139,250,0.2);
+    }
+
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 18px center;
+      background-size: 12px;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      color: white;
+      border: none;
+      padding: 18px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 20px -8px rgba(99,102,241,0.5);
+      min-height: 56px;
+    }
+
+    .btn:hover, .btn:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -8px rgba(99,102,241,0.7);
+    }
+
+    .footer-text {
+      text-align: center;
+      font-size: 0.87rem;
+      color: #94a3b8;
+      margin-top: 28px;
+      padding: 0 12px;
+    }
+
+    @media (min-width: 480px) {
+      .container { max-width: 440px; margin: 40px auto; }
+      .content { padding: 32px 28px; }
+      .header { padding: 60px 30px 40px; }
+    }
+
+    @media (min-width: 768px) {
+      .container { max-width: 500px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <h1>Form Pendaftaran Kursus B. Korea</h1>
+  </div>
+
+  <div class="content">
+    <div class="info-box">
+      <strong>Jadwal mulai :</strong> 23 Februari 2026<br><br>
+      <strong>Metode :</strong> Aplikasi Zoom<br><br>
+      <strong>Catatan:</strong> Setelah daftar, admin akan konfirmasi via WA. Jangan transfer dulu sebelum dapat balasan admin ya!
+    </div>
+
+    <form id="daftarForm" onsubmit="handleSubmit(event)">
+      <div>
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" required placeholder="Contoh: Budi Santoso" autocomplete="name">
+      </div>
+
+      <div>
+        <label for="wa">Nomor WhatsApp</label>
+        <input type="tel" id="wa" name="wa" required placeholder="0812xxxxxxx" pattern="08[0-9]{8,12}" inputmode="numeric" autocomplete="tel">
+      </div>
+
+      <div>
+        <label for="program">Pilih Kelas</label>
+        <select id="program" name="program" required>
+          <option value="" disabled selected>-- Pilih Kelas --</option>
+          <option value="online-reguler">Kelas Online Reguler</option>
+          <option value="reguler">Kelas Reguler (Offline/Intensif)</option>
+          <option value="karyawan">Kelas Karyawan</option>
+          <option value="to-pembahasan">Kelas Try Out + Pembahasan Soal</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Daftar Sekarang →</button>
+    </form>
+
+    <div class="footer-text">
+      Setelah melakukan pembayaran, silakan konfirmasi ke nomor admin via WA dengan melampirkan bukti pembayaran.<br><br>
+      Powered by Gumi Eohakwon Sukabumi • 2026
+    </div>
+  </div>
+</div>
+
 <script>
 function handleSubmit(e) {
   e.preventDefault();
@@ -33,35 +230,37 @@ function handleSubmit(e) {
       break;
   }
 
-  // Format pesan yang akan dikirim ke admin via WA
+  // Pesan yang akan dikirim ke admin
   const pesan = 
 `*Pendaftaran Baru - Kursus Bahasa Korea*%0A%0A` +
 `Nama Lengkap: ${nama}%0A` +
-`Nomor WA: ${wa}%0A` +
-`Kelas: ${kelasName}%0A` +
+`Nomor WA Siswa: ${wa}%0A` +
+`Kelas yang Dipilih: ${kelasName}%0A` +
 `Biaya: ${biaya}%0A%0A` +
+`Tanggal Submit: ${new Date().toLocaleString('id-ID')}%0A` +
 `Mohon segera ditindaklanjuti ya admin! 🚀`;
 
-  // Nomor admin (internasional format, tanpa + atau spasi)
-  const nomorAdmin = "62818055518900";  // 0818055518900 → 62818055518900
+  // Nomor admin (format internasional tanpa + atau spasi)
+  const nomorAdmin = "62818055518900";
 
-  // Buka WhatsApp dengan pesan siap kirim
+  // Buka WhatsApp
   const urlWA = `https://wa.me/${nomorAdmin}?text=${pesan}`;
-
-  // Redirect / buka link
   window.open(urlWA, '_blank');
 
-  // Tampilkan konfirmasi ke user (opsional, biar nggak bingung)
-  alert(`Terima kasih kak ${nama}!\\nData pendaftaran sudah siap dikirim ke admin via WhatsApp.\\nSilakan tekan "Kirim" di WhatsApp ya bro!`);
+  // Pesan konfirmasi ke user
+  alert(`Terima kasih kak ${nama}! \nData pendaftaran sudah siap dikirim ke admin via WhatsApp.\nSilakan tekan "KIRIM" di aplikasi WhatsApp ya bro!`);
 
   form.reset();
 }
 
-// Auto format nomor WA (tetap pakai yang lama)
+// Auto format nomor WA supaya rapi
 document.getElementById('wa').addEventListener('input', function(e) {
   let val = e.target.value.replace(/\D/g, '');
   if (val.startsWith('0')) val = val;
   else if (val.startsWith('62')) val = '0' + val.slice(2);
-  e.target.value = val.slice(0, 13);
+  e.target.value = val.slice(0, 13); // batasi panjang max
 });
 </script>
+
+</body>
+</html>
