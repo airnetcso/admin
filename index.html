@@ -160,7 +160,7 @@
     <div class="info-box">
       <strong>Jadwal mulai :</strong> 23 Februari 2026<br><br>
       <strong>Metode :</strong> Aplikasi Zoom<br><br>
-      <strong>Catatan:</strong> Setelah daftar, admin akan konfirmasi via WA. Jangan transfer dulu sebelum dapat balasan admin ya!
+      <strong>Pembayaran :</strong> Langsung transfer setelah daftar ke rekening di bawah. Kirim bukti ke nomor admin ini ya!
     </div>
 
     <form id="daftarForm" onsubmit="handleSubmit(event)">
@@ -185,11 +185,12 @@
         </select>
       </div>
 
-      <button type="submit" class="btn">Daftar Sekarang →</button>
+      <button type="submit" class="btn">Daftar & Transfer Sekarang →</button>
     </form>
 
     <div class="footer-text">
-      Setelah melakukan pembayaran, silakan konfirmasi ke nomor admin via WA dengan melampirkan bukti pembayaran.<br><br>
+      Pembayaran ke: <strong>BCA 5931 0845 51</strong> a/n Arva Djatnika<br>
+      Setelah transfer, langsung kirim bukti ke nomor admin via WA.<br><br>
       Powered by Gumi Eohakwon Sukabumi • 2026
     </div>
   </div>
@@ -230,38 +231,38 @@ function handleSubmit(e) {
       break;
   }
 
-  // Pesan yang akan dikirim ke admin
+  // Pesan ke admin (langsung include info transfer)
   const pesan = 
 `*Pendaftaran Baru - Kursus Bahasa Korea*%0A%0A` +
 `Nama Lengkap: ${nama}%0A` +
 `Nomor WA Siswa: ${wa}%0A` +
-`Kelas yang Dipilih: ${kelasName}%0A` +
+`Kelas: ${kelasName}%0A` +
 `Biaya: ${biaya}%0A%0A` +
-`Tanggal Submit: ${new Date().toLocaleString('id-ID')}%0A` +
-`Mohon segera ditindaklanjuti ya admin! 🚀`;
+`Detail Pembayaran:%0A` +
+`- Transfer ke: BCA%0A` +
+`- Rekening: 5931 0845 51%0A` +
+`- Atas Nama: Arva Djatnika%0A%0A` +
+`Tanggal Submit: ${new Date().toLocaleString('id-ID')}%0A%0A` +
+`Siswa sudah diinstruksikan untuk transfer langsung dan kirim bukti. Mohon dicek & konfirmasi ya admin! 🚀`;
 
-  // Nomor admin (format internasional tanpa + atau spasi)
-  const nomorAdmin = "6281805551900";
-
-  // Buka WhatsApp
+  const nomorAdmin = "62818055518900";
   const urlWA = `https://wa.me/${nomorAdmin}?text=${pesan}`;
   window.open(urlWA, '_blank');
 
-  // Pesan konfirmasi ke user
-  alert(`Terima kasih kak ${nama}! \nData pendaftaran sudah siap dikirim ke admin via WhatsApp.\nSilakan tekan "KIRIM" di aplikasi WhatsApp!`);
+  // Konfirmasi ke user
+  alert(`Mantap kak ${nama}! Pendaftaran ${kelasName} sudah terkirim ke admin.\\n\\nSilakan transfer segera ke:\\nBCA 5931 0845 51 a/n Arva Djatnika\\n\\nSetelah transfer, langsung kirim bukti ke nomor admin ini ya bro!`);
 
   form.reset();
 }
 
-// Auto format nomor WA supaya rapi
+// Auto format nomor WA
 document.getElementById('wa').addEventListener('input', function(e) {
   let val = e.target.value.replace(/\D/g, '');
   if (val.startsWith('0')) val = val;
   else if (val.startsWith('62')) val = '0' + val.slice(2);
-  e.target.value = val.slice(0, 13); // batasi panjang max
+  e.target.value = val.slice(0, 13);
 });
 </script>
 
 </body>
 </html>
-
